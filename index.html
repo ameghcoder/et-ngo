@@ -1,1 +1,86 @@
-<h1>Hello Empowering Tomorrow</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./public/style/main_style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="w-full h-20 px-4 md:px-8 py-2 bg-white shadow-sm z-50">
+      <div class="flex justify-between items-center">
+        <!-- left section -->
+        <div>
+          <img
+            class="w-16 h-16"
+            src="./public/assets/logo.png"
+            alt="empowering tomorrow logo"
+          />
+        </div>
+        <!-- right section -->
+        <div>
+          <ul class="flex gap-8">
+            <li>
+              <a
+                class="text-lg font-medium tracking-wide hover:underline"
+                href="#"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-lg font-medium tracking-wide hover:underline"
+                href="#"
+                >What We Do</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-lg font-medium tracking-wide hover:underline"
+                href="#"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- hero section -->
+      <section
+        class="w-full h-[calc(100vh-80px)] relative bg-[url('/public/assets/hero-section.jpg')] bg-center bg-cover"
+      >
+        <div
+          class="bg-gradient-to-bl from-transparent to-black/75 absolute top-0 left-0 w-full h-full z-10"
+        >
+          <div class="w-full h-full flex items-end justify-start">
+            <div class="pl-40 mt-auto mb-40 place-self-center">
+              <h1
+                class="mb-8 text-4xl font-extrabold tracking-wide leading-none md:text-5xl xl:text-6xl text-white"
+              >
+                Empowering Tomorrow
+              </h1>
+              <p
+                class="max-w-2xl mb-6 font-medium text-gray-200 lg:mb-8 md:text-lg lg:text-xl"
+              >
+                Inspiring Change, One Student at a Time
+              </p>
+              <button
+                class="inline-flex text-white bg-green-700 text-xl border-0 p-4 focus:outline-none hover:bg-green-600 rounded"
+              >
+                Volunteer with ET!
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
