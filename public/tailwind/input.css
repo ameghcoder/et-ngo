@@ -10,4 +10,8 @@
     html {
         scroll-behavior: smooth;
     }
+
+    .hero-section-bg {
+        background: url("/public/assets/hero-section.jpg");
+    }
 }
