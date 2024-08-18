@@ -14,4 +14,25 @@
     .hero-section-bg {
         background: url("../assets/hero-section.jpg");
     }
+
+    .icon-setting {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .facebook-icon {
+        background-image: url("../assets/facebook-gray.png");
+    }
+
+    .instagram-icon {
+        background-image: url("../assets/instagram-gray.png");
+    }
+
+    .linkedin-icon {
+        background-image: url("../assets/linkedin-gray.png");
+    }
 }
