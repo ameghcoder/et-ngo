@@ -563,7 +563,7 @@ html {
 }
 
 .hero-section-bg {
-  background: url("/public/assets/hero-section.jpg");
+  background: url("../assets/hero-section.jpg");
 }
 
 .absolute {
