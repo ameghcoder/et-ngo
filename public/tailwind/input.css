@@ -15,6 +15,10 @@
         background: url("../assets/hero-section.jpg");
     }
 
+    .our-mission-bg {
+        background: url("../assets/our-mission.png");
+    }
+
     .icon-setting {
         width: 40px;
         height: 40px;
