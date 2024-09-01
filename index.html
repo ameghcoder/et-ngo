@@ -111,13 +111,15 @@
                 </div>
               </div>
               <div>
-                <a href="#">
+                <a
+                  href="https://www.facebook.com/people/Empowering-Tomorrow/100083182405937/"
+                >
                   <span class="icon-setting facebook-icon"></span>
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com/empowering_tomorrow/">
                   <span class="icon-setting instagram-icon"></span>
                 </a>
-                <a href="#">
+                <a href="https://www.linkedin.com/company/empowering-tomorrow/">
                   <span class="icon-setting linkedin-icon"></span>
                 </a>
               </div>
@@ -130,9 +132,9 @@
         class="w-full min-h-screen h-auto relative flex items-center justify-center"
       >
         <div
-          class="w-full max-w-[1700px] grid grid-cols-2 gap-2 justify-between"
+          class="relative w-full max-w-[1700px] grid grid-cols-2 gap-2 justify-between"
         >
-          <div class="p-4 md:p-8 lg:p-12">
+          <div class="p-4 md:p-8 lg:p-12 relative z-20">
             <div class="relative">
               <img
                 class="w-full max-w-2xl object- rounded-2xl"
@@ -143,7 +145,7 @@
             </div>
           </div>
           <div
-            class="p-4 md:p-8 w-full max-w-3xl lg:p-12 flex flex-col gap-4 justify-center"
+            class="relative z-20 p-4 md:p-8 w-full max-w-3xl lg:p-12 flex flex-col gap-4 justify-center"
           >
             <h2 class="text-6xl">
               <strong class="text-gray-500">About</strong>
@@ -170,6 +172,11 @@
               with a scientific temperament.
             </p>
           </div>
+          <img
+            class="absolute right-4 top-4 z-10 w-full max-w-60 aspect-auto"
+            src="./public/assets/bond-image.png"
+            alt="bond image"
+          />
         </div>
       </section>
       <!-- our mission section -->
@@ -187,7 +194,82 @@
           </strong>
         </div>
       </section>
+      <!-- inspiring young minds: a visual collection of learning -->
+      <section class="w-full h-auto">
+        <div class="flex items-center justify-center px-4 py-12 pb-32">
+          <p
+            class="w-full font-medium text-2xl text-center max-w-4xl text-green-700"
+          >
+            Our mission is to instill environmental consciousness and ignite
+            curiosity among young minds empowering them to create a sustainable
+            future and helping them develop a scientific approach to life.
+          </p>
+        </div>
+        <div class="flex flex-col items-center justify-center">
+          <div class="w-full text-center">
+            <h2 class="text-4xl font-medium text-gray-500">
+              Inspiring Young Minds: A Visual
+              <em class="text-green-700 text-4xl">Collection of Learning</em>
+            </h2>
+          </div>
+          <div class="glide py-8 relative flex gap-4 w-full">
+            <div
+              class="glide__track w-full mx-auto overflow-hidden flex items-center"
+              data-glide-el="track"
+            >
+              <ul class="glide__slides flex gap-2">
+                <li class="glide__slide">
+                  <img
+                    class="w-full max-w-md h-full max-h-md object-cover aspect-square rounded-lg shadow-lg"
+                    src="./public/assets/inspiring-young-minds-01.webp"
+                    alt=""
+                  />
+                </li>
+                <li class="glide__slide">
+                  <img
+                    class="w-full max-w-md h-full max-h-md object-cover aspect-square rounded-lg shadow-lg"
+                    src="./public/assets/inspiring-young-minds-02.webp"
+                    alt=""
+                  />
+                </li>
+                <li class="glide__slide">
+                  <img
+                    class="w-full max-w-md h-full max-h-md object-cover aspect-square rounded-lg shadow-lg"
+                    src="./public/assets/inspiring-young-minds-03.webp"
+                    alt=""
+                  />
+                </li>
+                <li class="glide__slide">
+                  <img
+                    class="w-full max-w-md h-full max-h-md object-cover aspect-square rounded-lg shadow-lg"
+                    src="./public/assets/inspiring-young-minds-04.webp"
+                    alt=""
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex items-center justify-center p-4">
+            <p
+              class="w-full font-medium text-2xl text-center max-w-2xl text-green-700"
+            >
+              Join us in this inspiring journey of education and action for a
+              better tomorrow!
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
     <footer></footer>
+    <script src="https://unpkg.com/@glidejs/glide@3.6.2/dist/glide.js"></script>
+    <script type="text/javascript">
+      new Glide(".glide", {
+        type: "carousel",
+        startAt: 2,
+        perView: 4,
+        peek: { before: 100, after: 50 },
+        autoplay: 3000,
+      }).mount();
+    </script>
   </body>
 </html>
