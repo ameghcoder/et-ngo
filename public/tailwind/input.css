@@ -39,4 +39,14 @@
     .linkedin-icon {
         background-image: url("../assets/linkedin-gray.png");
     }
+
+    .right-arrow {
+        background-image: url("../assets/chevron_right.svg");
+    }
+
+    .left-arrow {
+        background-image: url("../assets/chevron_left.svg");
+    }
+
+
 }
