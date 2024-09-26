@@ -181,13 +181,17 @@
           class="relative w-full max-w-[1700px] grid grid-cols-2 gap-2 justify-between"
         >
           <div class="p-4 md:p-8 lg:p-12 relative z-20">
-            <div class="relative">
+            <div class="relative w-fit">
               <img
-                class="w-full max-w-2xl object- rounded-2xl"
+                class="w-full max-w-2xl rounded-2xl relative z-10"
                 src="./public/assets/about-us.png"
                 alt="about us image"
               />
-              <!-- <img src="/public/" alt="" /> -->
+              <img
+                src="/public/assets/mag glass.png"
+                class="w-80 aspect-square absolute -right-40 -bottom-48 z-0"
+                alt="lens"
+              />
             </div>
           </div>
           <div
@@ -242,7 +246,7 @@
       </section>
       <!-- inspiring young minds: a visual collection of learning -->
       <section class="w-full h-auto">
-        <div class="flex items-center justify-center px-4 py-12 pb-32">
+        <div class="flex items-center justify-center px-4 py-12 pb-32 relative">
           <p
             class="w-full font-medium text-2xl text-center max-w-4xl text-green-700"
           >
@@ -250,6 +254,11 @@
             curiosity among young minds empowering them to create a sustainable
             future and helping them develop a scientific approach to life.
           </p>
+          <img
+            class="absolute -left-28 w-80 top-2 aspect-square"
+            src="/public/assets/atoms.png"
+            alt="atoms image"
+          />
         </div>
         <div class="flex flex-col items-center justify-center">
           <div class="w-full text-center">
@@ -323,7 +332,7 @@
         </div>
       </section>
       <!-- Testimonials -->
-      <section class="w-full h-auto">
+      <section class="w-full h-auto relative overflow-hidden">
         <div class="py-4 md:py-8 flex items-center flex-col">
           <h2 class="text-4xl font-medium text-gray-500">
             <em class="text-green-700 text-4xl">What</em>
@@ -333,7 +342,7 @@
           </h2>
         </div>
         <div
-          class="glide_testimonials max-w-6xl mx-auto py-8 relative flex flex-col gap-4 w-full"
+          class="glide_testimonials max-w-6xl mx-auto py-8 flex flex-col gap-4 w-full relative"
         >
           <div
             class="glide__track w-full mx-auto overflow-hidden flex items-center py-10"
@@ -428,6 +437,16 @@
             </button>
           </div>
         </div>
+        <img
+          class="absolute -right-20 top-0 h-full"
+          src="/public/assets/double helix.png"
+          alt="double helix"
+        />
+        <img
+          class="absolute -left-10 bottom-0 max-w-60"
+          src="/public/assets/microscope.png"
+          alt="microscope"
+        />
       </section>
     </main>
     <footer>

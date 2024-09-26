@@ -570,6 +570,10 @@ html {
   background: url("../assets/our-mission.png");
 }
 
+.contact-us-bg {
+  background: url("../assets/contact-us.jpg");
+}
+
 .icon-setting {
   width: 40px;
   height: 40px;
@@ -611,6 +615,34 @@ html {
   position: relative;
 }
 
+.-bottom-40 {
+  bottom: -10rem;
+}
+
+.-bottom-48 {
+  bottom: -12rem;
+}
+
+.-left-10 {
+  left: -2.5rem;
+}
+
+.-left-28 {
+  left: -7rem;
+}
+
+.-left-40 {
+  left: -10rem;
+}
+
+.-right-20 {
+  right: -5rem;
+}
+
+.-right-40 {
+  right: -10rem;
+}
+
 .bottom-0 {
   bottom: 0px;
 }
@@ -623,12 +655,20 @@ html {
   left: 0px;
 }
 
+.right-0 {
+  right: 0px;
+}
+
 .right-4 {
   right: 1rem;
 }
 
 .top-0 {
   top: 0px;
+}
+
+.top-2 {
+  top: 0.5rem;
 }
 
 .top-3 {
@@ -662,6 +702,11 @@ html {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .mb-4 {
@@ -732,6 +777,10 @@ html {
   aspect-ratio: 1 / 1;
 }
 
+.h-0 {
+  height: 0px;
+}
+
 .h-16 {
   height: 4rem;
 }
@@ -768,6 +817,15 @@ html {
   width: 4rem;
 }
 
+.w-80 {
+  width: 20rem;
+}
+
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .w-full {
   width: 100%;
 }
@@ -778,6 +836,10 @@ html {
 
 .max-w-3xl {
   max-width: 48rem;
+}
+
+.max-w-40 {
+  max-width: 10rem;
 }
 
 .max-w-4xl {
@@ -802,6 +864,10 @@ html {
 
 .max-w-sm {
   max-width: 24rem;
+}
+
+.max-w-lg {
+  max-width: 32rem;
 }
 
 .origin-\[0\] {
@@ -927,6 +993,11 @@ html {
   border-color: rgb(22 163 74 / 0.2);
 }
 
+.border-gray-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(156 163 175 / var(--tw-border-opacity));
+}
+
 .bg-\[\#414141\] {
   --tw-bg-opacity: 1;
   background-color: rgb(65 65 65 / var(--tw-bg-opacity));
@@ -984,6 +1055,10 @@ html {
 
 .to-black\/75 {
   --tw-gradient-to: rgb(0 0 0 / 0.75) var(--tw-gradient-to-position);
+}
+
+.to-black\/50 {
+  --tw-gradient-to: rgb(0 0 0 / 0.5) var(--tw-gradient-to-position);
 }
 
 .bg-cover {
@@ -1132,6 +1207,14 @@ html {
   font-weight: 600;
 }
 
+.font-light {
+  font-weight: 300;
+}
+
+.font-extralight {
+  font-weight: 200;
+}
+
 .leading-none {
   line-height: 1;
 }
@@ -1165,6 +1248,11 @@ html {
   color: rgb(34 197 94 / var(--tw-text-opacity));
 }
 
+.text-green-600 {
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity));
+}
+
 .text-green-700 {
   --tw-text-opacity: 1;
   color: rgb(21 128 61 / var(--tw-text-opacity));
@@ -1173,6 +1261,18 @@ html {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-60 {
+  opacity: 0.6;
 }
 
 .shadow-lg {
@@ -1358,6 +1458,11 @@ html {
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1372,6 +1477,11 @@ html {
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
 

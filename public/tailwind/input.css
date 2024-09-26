@@ -19,6 +19,10 @@
         background: url("../assets/our-mission.png");
     }
 
+    .contact-us-bg {
+        background: url("../assets/contact-us.jpg");
+    }
+
     .icon-setting {
         width: 40px;
         height: 40px;
