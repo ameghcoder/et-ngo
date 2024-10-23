@@ -13,6 +13,22 @@
 
     .hero-section-bg {
         background: url("../assets/hero-section.jpg");
+        background-position: 65%;
+        background-repeat: no-repeat;
+    }
+
+    @media (max-width: 768px) {
+        .hero-section-bg {
+            background-position: 53% 0%;
+            background-size: 200%;
+        }
+    }
+
+    @media (max-width: 418px) {
+        .hero-section-bg {
+            background-position: 53% 0%;
+            background-size: 250%;
+        }
     }
 
     .our-mission-bg {
@@ -26,6 +42,15 @@
     .icon-setting {
         width: 40px;
         height: 40px;
+        display: inline-block;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .icon-big {
+        width: 50px;
+        height: 50px;
         display: inline-block;
         background-position: center;
         background-repeat: no-repeat;
@@ -52,5 +77,12 @@
         background-image: url("../assets/chevron_left.svg");
     }
 
+    .hamburger {
+        background-image: url("../assets/hamburger.svg");
+    }
 
+
+    p {
+        @apply text-base sm:text-xl lg:text-2xl;
+    }
 }

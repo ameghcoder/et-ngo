@@ -1,31 +1,21 @@
 DirectoryIndex index.php
 Options -Indexes
 
-<FilesMatch "\.txt$">
-    Order allow,deny
-    Deny from all
-</FilesMatch>
 
 <IfModule mod_rewrite.c>
-  # Enable Rewrite Engine
   RewriteEngine On
   RewriteBase /
 
-  # Redirect requests with .php extension to the same URL without the extension
+  # General rules
   RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.php
   RewriteRule ^/?(.*)\.php$ /$1 [L,R=301]
 
-  # Serve the file if it exists with a .php extension
   RewriteCond %{REQUEST_FILENAME}\.php -f
   RewriteRule ^/?(.*)$ /$1.php [L]
 
-  # Rewrite condition for directories and files that do not exist
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-f
-
-  # Rewrite rule to map URLs without extensions to .php files
   RewriteRule ^([^\.]+)$ $1.php [NC,L]
-
 </IfModule>
 
 <IfModule mod_filter.c>
