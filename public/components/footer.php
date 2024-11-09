@@ -44,4 +44,5 @@
     </div>
 </footer>
 
+<script src="./public/script/base_script.js"></script>
 <script src="./public/script/script_v1.js" defer></script>

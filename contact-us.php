@@ -63,7 +63,7 @@
             </div>
             <textarea name="message" id="message" placeholder="What are you contacting us for?"
               class="border border-gray-400 rounded-md p-4 mb-4 w-full"></textarea>
-            <button type="button" class="bg-green-700 text-white mx-auto px-8 py-4 rounded-md text-center block">
+            <button id="contact_us" type="button" class="bg-green-700 text-white mx-auto px-8 py-4 rounded-md text-center block">
               Submit
             </button>
           </form>
@@ -165,7 +165,10 @@
       </div>
     </section>
   </main>
+  
   <?php include_once __DIR__ . "/public/components/footer.php" ?>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="/public/script/contact_us.js"></script>
 </body>
 
 </html>
