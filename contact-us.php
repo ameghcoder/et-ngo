@@ -23,13 +23,10 @@
             We would love to hear from you!
           </h1>
           <div class="flex gap-8 py-8 flex-col md:flex-wrap">
+          <?php require_once __DIR__ . "/public/components/donateNow.php" ?>
             <a href="#" id="volunteer-form-btn"
               class="inline-flex justify-center text-white bg-green-600 text-xl border-0 px-8 py-2 focus:outline-none hover:bg-green-700 rounded-md hover:-translate-y-1 transition">
-              Donate Now
-            </a>
-            <a href="#" id="volunteer-form-btn"
-              class="inline-flex justify-center text-white bg-green-600 text-xl border-0 px-8 py-2 focus:outline-none hover:bg-green-700 rounded-md hover:-translate-y-1 transition">
-              Voluntneer at ET
+              Volunteer at ET
             </a>
           </div>
         </div>

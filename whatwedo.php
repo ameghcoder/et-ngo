@@ -14,10 +14,7 @@
   <main class="relative">
     <section class="flex items-center justify-between p-4 w-full max-w-[1700px] mx-auto flex-col md:flex-row">
       <div class="flex gap-4 flex-col sm:flex-row">
-        <a href="#" id="volunteer-form-btn"
-          class="inline-flex justify-center text-white bg-green-600 text-xl border-0 px-8 py-2 focus:outline-none hover:bg-green-700 rounded-md hover:-translate-y-1 transition">
-          Donate Now
-        </a>
+        <?php require_once __DIR__ . "/public/components/donateNow.php" ?>
         <a href="#" id="volunteer-form-btn"
           class="inline-flex justify-center text-white bg-green-600 text-xl border-0 px-8 py-2 focus:outline-none hover:bg-green-700 rounded-md hover:-translate-y-1 transition">
           Volunteer Now
@@ -210,10 +207,7 @@
         </p>
       </div>
       <div class="flex gap-4 flex-col md:flex-row">
-        <a href="#" id="volunteer-form-btn"
-          class="inline-flex text-white bg-green-600 text-xl border-0 px-8 py-2 focus:outline-none hover:bg-green-700 rounded-md hover:-translate-y-1 transition">
-          Donate Now
-        </a>
+      <?php require_once __DIR__ . "/public/components/donateNow.php" ?>
         <a href="#" id="volunteer-form-btn"
           class="inline-flex text-white bg-green-600 text-xl border-0 px-8 py-2 focus:outline-none hover:bg-green-700 rounded-md hover:-translate-y-1 transition">
           Volunteer Now
@@ -222,7 +216,9 @@
       <div>
         <p class="text-2xl text-center opacity-75">
           Or head to our
-          <strong class="text-green-700">Contact Us</strong> section and we
+          <strong class="text-green-700">
+            <a href="./contact-us">Contact Us</a>
+          </strong> section and we
           are<br />equally excited to hear from you.
         </p>
       </div>
