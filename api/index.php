@@ -31,7 +31,7 @@ if($Authenticator->check()){
 
                 if($saveData){
                     JsonResponse::send(
-                        "We received your message and will contact you soon",
+                        "Thank you for reaching out to us. We have received your message.",
                         "success"
                     );
                 } else{
