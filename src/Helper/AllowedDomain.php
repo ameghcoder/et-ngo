@@ -17,7 +17,7 @@ try {
             if ($phaseType === "development") {
                 return "etngo.local";
             } elseif ($phaseType === "production") {
-                return "etngo.com";
+                return "etngo.receko.com";
             }
         }
     }
