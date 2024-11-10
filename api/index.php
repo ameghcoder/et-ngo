@@ -61,4 +61,9 @@ if($Authenticator->check()){
             "error",
         );
     }
+} else{
+    JsonResponse::send(
+        "Unauthorized Access",
+        "error"
+    );
 }
