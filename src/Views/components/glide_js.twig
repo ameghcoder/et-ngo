@@ -1,0 +1,72 @@
+  <script src="https://unpkg.com/@glidejs/glide@3.6.2/dist/glide.js"></script>
+  <script type="text/javascript">
+    const glide1 = new Glide(".glide", {
+      type: "carousel",
+      startAt: 2,
+      perView: 4,
+      peek: { before: 100, after: 50 },
+      autoplay: 3000,
+      hoverpause: true,
+      breakpoints: {
+        1024: {
+          perView: 3
+        },
+        800: {
+          perView: 2
+        },
+        550: {
+          perView: 1,
+          peek: { before: 50, after: 50 }
+        }
+      }
+    });
+    const glide2 = new Glide(".glide_testimonials", {
+      type: "carousel",
+      startAt: 1,
+      focusAt: "center",
+      perView: 3,
+      // autoplay: 3000,
+      hoverpause: true,
+      breakpoints: {
+        1150: {
+          peek: {
+            before: -50,
+            after: -20
+          }
+        },
+        950: {
+          peek: {
+            before: -125,
+            after: -125
+          }
+        },
+        850: {
+          peek: {
+            before: -175,
+            after: -175
+          }
+        },
+        700: {
+          peek: {
+            before: -250,
+            after: -250
+          }
+        },
+        550: {
+          peek: {
+            before: -300,
+            after: -350
+          }
+        },
+        450: {
+          peek: {
+            before: -300,
+            after: -400
+          }
+        }
+      }
+    });
+
+    glide1.mount();
+    glide2.mount();
+  </script>

@@ -12,7 +12,7 @@
     }
 
     .hero-section-bg {
-        background: url("../assets/hero-section.jpg");
+        background: url("../assets/hero-section.webp");
         background-position: 65%;
         background-repeat: no-repeat;
     }
@@ -32,11 +32,11 @@
     }
 
     .our-mission-bg {
-        background: url("../assets/our-mission.png");
+        background: url("../assets/our-mission.webp");
     }
 
     .contact-us-bg {
-        background: url("../assets/contact-us.jpg");
+        background: url("../assets/contact-us.webp");
     }
 
     .icon-setting {

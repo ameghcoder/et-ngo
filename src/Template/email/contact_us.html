@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{subject}</title>
+    <style>
+        body{
+            background-color: #dedede;
+            width: 100vw;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+            overflow-x: hidden;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background-color: white;
+            box-shadow: 4px 8px 12px 0px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+        #users {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #users td, #users th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #users tr:nth-child(even){background-color: #f2f2f2;}
+
+        #users tr:hover {background-color: #ddd;}
+
+        #users th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #16a34a;
+            color: white;
+        }
+        .smallText{
+            font-size: 10px;
+            color: #a7a7a7;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Empowering Tommorrow</h1>
+        <p>Someone want to contact you, their details are here</p>
+        <table id="users">
+            <tr>
+                <th>FirstName</th>
+                <td>{fname}</td>
+            </tr>
+            <tr>
+                <th>LastName</th>
+                <td>{lname}</td>
+            </tr>
+            <tr>
+                <th>Phone Number</th>
+                <td>{number}</td>
+            </tr>
+            <tr>
+                <th>Email Address</th>
+                <td>{email}</td>
+            </tr>
+            <tr>
+                <th>Message</th>
+                <td>{message}</td>
+            </tr>
+        </table>
+        <p class="smallText">This email is sent by your server. For more details cotact to developer.</p>
+    </div>
+</body>
+</html>

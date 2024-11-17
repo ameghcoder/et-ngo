@@ -57,9 +57,9 @@ const contact = () => {
             form.append("number", pnumber.value);
             form.append("email", email.value);
             form.append("message", message.value);
-            form.append("purpose", "contact");
+            form.append("country_code", "+91");
 
-            fetchDataVersion2(`/api/`, "POST", form)
+            fetchDataVersion2(`/api/contactform`, "POST", form)
             .then(response => {
                 if(isValidJsonData(response)){
                     if(response["type"] == "error"){

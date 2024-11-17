@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{subject}</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #dedede;
+            width: 100%;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background-color: white;
+            box-shadow: 4px 8px 12px 0px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin:  auto;
+        }
+        h1, p{
+            margin-bottom: 20px;
+        }
+        #users {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #users td, #users th {
+            max-width: 100px;
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #users tr:nth-child(even){background-color: #f2f2f2;}
+
+        #users tr:hover {background-color: #ddd;}
+
+        #users th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #16a34a;
+            color: white;
+        }
+        .smallText{
+            font-size: 10px;
+            color: #a7a7a7;
+            text-align: center;
+            margin-top: 20px;
+        }
+        @media (max-width: 700px) {
+            #users{
+                margin-top: 10px;
+            }
+            #users tr{
+                display: flex;
+                flex-direction: column;
+            }
+            #users th, #users td{
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Empowering Tommorrow</h1>
+        <p>Hey, someone want to join us as Volunteer. Here is the details</p>
+        <table id="users">
+            <tr>
+                <th>Full Name</th>
+                <td>{name}</td>
+            </tr>
+            <tr>
+                <th>Contact</th>
+                <td>{contact}</td>
+            </tr>
+            <tr>
+                <th>Education</th>
+                <td>{education}</td>
+            </tr>
+            <tr>
+                <th>Occupation</th>
+                <td>{occupation}</td>
+            </tr>
+            <tr>
+                <th>Designation</th>
+                <td>{designation}</td>
+            </tr>
+            <tr>
+                <th>PinCode</th>
+                <td>{pincode}</td>
+            </tr> 
+            <tr>
+                <th>City</th>
+                <td>{city}</td>
+            </tr> 
+            <tr>
+                <th>State</th>
+                <td>{state}</td>
+            </tr>
+            <tr>
+                <th>Country</th>
+                <td>{country}</td>
+            </tr>
+            <tr>
+                <th>Will you be available to participate in outreach programs at schools in your locality on selected working days (between Monday to Friday) during standard school working hours?</th>
+                <td>{atp}</td>
+            </tr>
+            <tr>
+                <th>What motivates you to apply to volunteer at ET?</th>
+                <td>{message}</td>
+            </tr>
+        </table>
+
+
+        <p class="smallText">This email is sent by your server. For more details cotact to developer.</p>
+    </div>
+</body>
+</html>

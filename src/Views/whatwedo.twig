@@ -1,20 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends './layout.twig' %}
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <?php include_once __DIR__ . "/public/components/styling.php" ?>
+{% block title %}
+    What we do
+{% endblock %}
 
-  <title>What we do in Empowering Tomorrow</title>
-</head>
-
-<body>
-  <?php include_once __DIR__ . "/public/components/header.php" ?>
-  <main class="relative">
-    <section class="flex items-center justify-between p-4 w-full max-w-[1700px] mx-auto flex-col md:flex-row">
+{% block content %}
+    <main class="relative">
+        <section class="flex items-center justify-between p-4 w-full max-w-[1700px] mx-auto flex-col md:flex-row">
       <div class="flex gap-4 flex-col sm:flex-row">
-        <?php require_once __DIR__ . "/public/components/donateNow.php" ?>
+        {% include './components/donate_btn.twig' %}
         <a href="#" id="volunteer-form-btn"
           class="inline-flex justify-center text-white bg-green-600 text-xl border-0 px-8 py-2 focus:outline-none hover:bg-green-700 rounded-md hover:-translate-y-1 transition">
           Volunteer Now
@@ -165,7 +159,7 @@
         <div class="relative w-full lg:w-fit">
           <img
             class="h-[35vh] md:h-[50vh] lg:h-auto w-full max-w-none lg:max-w-2xl rounded-2xl relative z-10 object-cover"
-            src="./public/assets/what-we-do-2.jpg" alt="what we do image" />
+            src="{{ whatWeDo2}}" alt="what we do image" />
           <img src="./public/assets/atoms.png"
             class="w-32 lg:w-80 aspect-square absolute left-1/2 -translate-x-1/2 lg:translate-x-0 lg:-left-40 -bottom-14 lg:-bottom-40 z-0"
             alt="atom" />
@@ -177,7 +171,7 @@
         <div class="relative w-full lg:w-fit">
           <img
             class="h-[35vh] md:h-[50vh] lg:h-auto w-full max-w-none lg:max-w-2xl rounded-2xl relative z-10 object-cover"
-            src="./public/assets/what-we-do-3.jpg" alt="what we do image" />
+            src="{{ whatWeDo3 }}" alt="what we do image" />
         </div>
       </div>
       <div class="z-20 p-4 md:p-8 w-full lg:max-w-3xl lg:p-12 flex flex-col gap-4 justify-center">
@@ -207,7 +201,7 @@
         </p>
       </div>
       <div class="flex gap-4 flex-col md:flex-row">
-      <?php require_once __DIR__ . "/public/components/donateNow.php" ?>
+      {% include './components/donate_btn.twig' %}
         <a href="#" id="volunteer-form-btn"
           class="inline-flex text-white bg-green-600 text-xl border-0 px-8 py-2 focus:outline-none hover:bg-green-700 rounded-md hover:-translate-y-1 transition">
           Volunteer Now
@@ -226,8 +220,4 @@
     <img src="./public/assets/test-tubes.png" alt="test tubes"
       class="w-full max-w-60 xl:max-w-xs absolute -bottom-48 lg:-bottom-40 xl:-bottom-20 2xl:bottom-0 right-0 z-10" />
   </main>
-  <?php include_once __DIR__ . "/public/components/footer.php" ?>
-
-</body>
-
-</html>
+{% endblock %}

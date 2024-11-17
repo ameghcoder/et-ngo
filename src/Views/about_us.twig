@@ -1,0 +1,339 @@
+{% extends './layout.twig' %}
+
+{% block title %}
+    About us
+{% endblock %}
+
+{% block content %}
+    <main>
+    <!-- hero section -->
+    <section class="w-full h-[calc(100vh-80px)] relative hero-section-bg bg-[#414141] md:bg-cover">
+        <div class="md:bg-gradient-to-bl from-transparent to-black/75 absolute top-0 left-0 w-full h-full z-10">
+            <div class="w-full h-full flex items-end justify-start relative">
+            <div
+                class="w-full pb-5 md:pb-0 pl-4 sm:pl-8 md:pl-20 lg:pl-40 pt-10 mt-auto mb-40 place-self-center bg-[#414141] md:bg-transparent">
+                <h1 class="mb-8 text-4xl font-extrabold tracking-wide leading-none md:text-5xl xl:text-6xl text-white">
+                Empowering Tomorrow
+                </h1>
+                <p class="max-w-2xl mb-6 font-medium text-gray-200 lg:mb-8 md:text-lg lg:text-xl">
+                Inspiring Change, One Student at a Time
+                </p>
+                <button id="volunteer-form-btn"
+                class="inline-flex text-white bg-green-700 text-xl border-0 p-4 focus:outline-none hover:bg-green-600 rounded">
+                Volunteer with ET!
+                </button>
+            </div>
+            <div
+                class="bg-[#414141] border-t border-gray-600 w-full h-auto md:h-32 absolute bottom-0 left-0 px-4 py-4 flex gap-8 justify-between items-center flex-col md:flex-row sm:px-8 md:px-20 lg:px-40">
+                <div class="flex gap-4">
+                <div>
+                    <div class="flex flex-col gap-4 text-white font-bold text-xl md:text-2xl lg:text-4xl">
+                    1000+
+                    </div>
+                    <div class="flex flex-col gap-4 text-white font-bold text-xl md:text-2xl lg:text-4xl">
+                    Students
+                    </div>
+                </div>
+                <div class="ml-4">
+                    <div class="flex flex-col gap-4 text-white font-bold text-xl md:text-2xl lg:text-4xl">
+                    15+
+                    </div>
+                    <div class="flex flex-col gap-4 text-white font-bold text-xl md:text-2xl lg:text-4xl">
+                    Workshops
+                    </div>
+                </div>
+                </div>
+                <div>
+                <a href="https://www.facebook.com/people/Empowering-Tomorrow/100083182405937/">
+                    <span class="icon-setting facebook-icon"></span>
+                </a>
+                <a href="https://www.instagram.com/empowering_tomorrow/">
+                    <span class="icon-setting instagram-icon"></span>
+                </a>
+                <a href="https://www.linkedin.com/company/empowering-tomorrow/">
+                    <span class="icon-setting linkedin-icon"></span>
+                </a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <!-- about us section -->
+    <section class="w-full min-h-screen h-auto relative flex items-center justify-center">
+        <div class="relative w-full max-w-[1700px] grid grid-cols-1 lg:grid-cols-2 gap-2 justify-between">
+            <div class="p-4 md:p-8 lg:p-12 relative z-20">
+            <div class="relative w-fit">
+                <img class="w-full max-w-none lg:max-w-2xl rounded-2xl relative z-10 object-cover"
+                src="{{ aboutUs }}" alt="about us image" />
+                <img src="./public/assets/mag-glass.png"
+                class="w-40 lg:w-80 aspect-square absolute -bottom-28 right-1/2 translate-x-1/2 lg:translate-x-0 lg:-right-40 lg:-bottom-48 z-0"
+                alt="lens" />
+            </div>
+            </div>
+            <div class="relative z-20 p-4 md:p-8 w-full max-w-none lg:max-w-3xl lg:p-12 flex flex-col gap-4 justify-center">
+            <h2 class="text-4xl lg:text-6xl">
+                <strong class="text-gray-500">About</strong>
+                <em class="text-gray-500">Us</em>
+            </h2>
+            <p class="text-base sm:text-xl lg:text-2xl text-gray-500 font-medium">
+                Empowering Tomorrow is a passionate volunteering organization
+                focused on contributing towards
+                <strong class="text-green-500">sustainability, education and advocacy</strong>. Through our outreach
+                programs in underprivileged schools, we
+                create a sense of
+                <strong class="text-green-500">environmental awareness</strong>
+                and curiosity in science which will enable them to use science as
+                a tool to find solutions for environmental problems around them
+            </p>
+            <p class="text-base sm:text-xl lg:text-2xl text-gray-500 font-medium">
+                In our workshops, we promote
+                <strong class="text-green-500">concept-based learning</strong>
+                through
+                <strong class="text-green-500">hands-on experimentation</strong>
+                thus empowering these kids to be future leaders who are
+                environmentally conscious, rational thinkers and problem solvers
+                with a scientific temperament.
+            </p>
+            </div>
+            <img
+            class="absolute right-0 top-0 lg:right-4 lg:-top-20 2xl:-top-10 z-10 w-full max-w-40 xl:max-w-60 aspect-auto"
+            src="./public/assets/bond-image.png" alt="bond image" />
+        </div>
+    </section>
+    <!-- our mission section -->
+    <section class="w-full h-[25vh] md:min-h-[80vh] bg-cover bg-center our-mission-bg relative">
+        <div class="w-full h-full bg-gradient-to-b from-transparent to-black/75 absolute">
+            <strong class="text-4xl text-white absolute bottom-4 w-full left-0 text-center z-50">
+            <span class="font-semibold">Our</span>
+            <em class="text-green-500 font-semibold">Mission</em>
+            </strong>
+        </div>
+    </section>
+    <!-- inspiring young minds: a visual collection of learning -->
+    <section class="w-full h-auto">
+        <div class="flex items-center justify-center px-4 py-12 md:pb-32 relative">
+            <p class="w-full font-medium text-center max-w-4xl text-green-700">
+            Our mission is to instill environmental consciousness and ignite
+            curiosity among young minds empowering them to create a sustainable
+            future and helping them develop a scientific approach to life.
+            </p>
+            <img
+            class="absolute -left-8 md:-left-10 lg:-left-48 xl:-left-28 w-20 md:w-40 lg:w-80 top-1/2 lg:top-2 lg:translate-y-0 aspect-square"
+            src="./public/assets/atoms.png" alt="atoms image" />
+        </div>
+        <div class="flex flex-col items-center justify-center">
+            <div class="w-full text-center">
+            <h2 class="text-4xl font-medium text-gray-500">
+                Inspiring Young Minds: A Visual
+                <em class="text-green-700 text-4xl">Collection of Learning</em>
+            </h2>
+            </div>
+            <div class="glide py-8 relative flex flex-col gap-4 w-full">
+            <div class="glide__track w-full mx-auto overflow-hidden flex items-center" data-glide-el="track">
+                <ul class="glide__slides flex gap-2">
+                <li class="glide__slide">
+                    <img class="w-full max-w-md h-full max-h-md object-cover aspect-square rounded-lg shadow-lg"
+                    src="{{ inspiringYoungMinds01 }}" alt="" />
+                </li>
+                <li class="glide__slide">
+                    <img class="w-full max-w-md h-full max-h-md object-cover aspect-square rounded-lg shadow-lg"
+                    src="{{ inspiringYoungMinds02 }}" alt="" />
+                </li>
+                <li class="glide__slide">
+                    <img class="w-full max-w-md h-full max-h-md object-cover aspect-square rounded-lg shadow-lg"
+                    src="{{ inspiringYoungMinds03 }}" alt="" />
+                </li>
+                <li class="glide__slide">
+                    <img class="w-full max-w-md h-full max-h-md object-cover aspect-square rounded-lg shadow-lg"
+                    src="{{ inspiringYoungMinds04 }}" alt="" />
+                </li>
+                </ul>
+            </div>
+            <div class="glide__arrows w-full flex gap-4 items-center justify-center" data-glide-el="controls">
+                <button
+                class="glide__arrow glide__arrow--left p-2 flex items-center justify-center rounded-lg bg-green-600/10 hover:scale-105 border border-green-600/20 hover:shadow-lg transition"
+                data-glide-dir="<">
+                <span class="icon-setting left-arrow"></span>
+                </button>
+                <button
+                class="glide__arrow glide__arrow--right p-2 flex items-center justify-center rounded-lg bg-green-600/10 hover:scale-105 border border-green-600/20 hover:shadow-lg transition"
+                data-glide-dir=">">
+                <span class="icon-setting right-arrow"></span>
+                </button>
+            </div>
+            </div>
+            <div class="flex items-center justify-center p-4">
+            <p class="w-full font-medium text-center max-w-2xl text-green-700">
+                Join us in this inspiring journey of education and action for a
+                better tomorrow!
+            </p>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials -->
+    <section class="w-full h-auto relative overflow-hidden">
+        <div class="py-4 md:py-8 flex items-center flex-col">
+            <h2 class="text-4xl font-medium text-gray-500 text-center">
+            <em class="text-green-700 text-4xl">What</em>
+            we do
+            <em class="text-green-700 text-4xl">Why</em>
+            we do
+            </h2>
+        </div>
+        <div class="glide_testimonials max-w-6xl mx-auto py-8 flex flex-col gap-4 w-full relative">
+            <div class="glide__track w-full mx-auto overflow-hidden flex items-center py-10" data-glide-el="track">
+            <ul class="glide__slides flex gap-2">
+                <li
+                class="aspect-square glide__slide rounded-lg w-96 max-w-sm shadow-lg bg-[linear-gradient(179deg,#353535,30%,#16a34a)] transition-all"
+                data-type="quote">
+                <span class="p-4 md:p-8 inline-flex flex-col h-full items-center justify-center gap-4 text-white">
+                    <strong class="text-base inline-block font-normal text-justify">The realization of how every student can
+                    play a part in
+                    solving the global environmental challenges was put forth in
+                    a very simplistic manner. Where retaining students’
+                    attention for even half an hour is a challenge in today’s
+                    time, Empowering Tomorrow made these two hours go like a
+                    breeze.
+                    </strong>
+                    <span class="inline-flex flex-col items-center">
+                    <strong>Principal</strong>
+                    <span class="text-sm">
+                        Anudanit Prathamik Ashramshala, Raigad, MH
+                    </span>
+                    </span>
+                </span>
+                </li>
+                <li
+                class="aspect-square glide__slide rounded-lg w-96 max-w-sm shadow-lg bg-[linear-gradient(179deg,#353535,30%,#16a34a)] transition-all"
+                data-type="quote">
+                <span class="p-4 md:p-8 inline-flex flex-col h-full items-center justify-center gap-4 text-white">
+                    <strong class="text-base inline-block font-normal text-justify">You bonded with our students so well in
+                    a short time. On
+                    behalf of all the students, I request you to come to our
+                    school again.
+                    </strong>
+                    <span class="inline-flex flex-col items-center">
+                    <strong>Principal</strong>
+                    <span class="text-sm">
+                        Pt. Motilal Nehru Primary School
+                    </span>
+                    <span class="text-sm">Mumbai, Maharashtra</span>
+                    </span>
+                </span>
+                </li>
+                <li
+                class="aspect-square glide__slide rounded-lg w-96 max-w-sm shadow-lg bg-[linear-gradient(179deg,#353535,30%,#16a34a)] transition-all"
+                data-type="quote">
+                <span class="p-4 md:p-8 inline-flex flex-col h-full items-center justify-center gap-4 text-white">
+                    <strong class="text-base inline-block font-normal text-justify">students to pursue science and be
+                    ambitious. Seeing these
+                    students become the leaders of tomorrow will definitely be a
+                    satisfying experience for Team Empowering Tomorrow. Your
+                    work is truly inspiring!
+                    </strong>
+                    <span class="inline-flex flex-col items-center">
+                    <strong>School Teacher</strong>
+                    <span class="text-sm">
+                        Zilla Parishad Primary School, Nashik, MH
+                    </span>
+                    </span>
+                </span>
+                </li>
+            </ul>
+            </div>
+            <div class="glide__arrows w-full flex gap-4 items-center justify-center" data-glide-el="controls">
+            <button
+                class="glide__arrow glide__arrow--left p-2 flex items-center justify-center rounded-lg bg-green-600/10 hover:scale-105 border border-green-600/20 hover:shadow-lg transition"
+                data-glide-dir="<">
+                <span class="icon-setting left-arrow"></span>
+            </button>
+            <button
+                class="glide__arrow glide__arrow--right p-2 flex items-center justify-center rounded-lg bg-green-600/10 hover:scale-105 border border-green-600/20 hover:shadow-lg transition"
+                data-glide-dir=">">
+                <span class="icon-setting right-arrow"></span>
+            </button>
+            </div>
+        </div>
+        <img
+            class="absolute rotate-90 md:rotate-0 -translate-y-1/2 md:translate-y-0 -right-10 md:-right-20 top-[20%] md:top-0 h-1/2 md:h-full"
+            src="./public/assets/double-helix.png" alt="double helix" />
+        <img class="absolute -left-5 sm:-left-10 bottom-0 max-w-20 sm:max-w-40 md:max-w-60"
+            src="./public/assets/microscope.png" alt="microscope" />
+    </section>
+</main>
+{% endblock %}
+
+{% block extra_scripts %}
+    <script src="https://unpkg.com/@glidejs/glide@3.6.2/dist/glide.js"></script>
+    <script type="text/javascript">
+        const glide1 = new Glide(".glide", {
+        type: "carousel",
+        startAt: 2,
+        perView: 4,
+        peek: { before: 100, after: 50 },
+        autoplay: 3000,
+        hoverpause: true,
+        breakpoints: {
+            1024: {
+            perView: 3
+            },
+            800: {
+            perView: 2
+            },
+            550: {
+            perView: 1,
+            peek: { before: 50, after: 50 }
+            }
+        }
+        });
+        const glide2 = new Glide(".glide_testimonials", {
+        type: "carousel",
+        startAt: 1,
+        focusAt: "center",
+        perView: 3,
+        // autoplay: 3000,
+        hoverpause: true,
+        breakpoints: {
+            1150: {
+            peek: {
+                before: -50,
+                after: -20
+            }
+            },
+            950: {
+            peek: {
+                before: -125,
+                after: -125
+            }
+            },
+            850: {
+            peek: {
+                before: -175,
+                after: -175
+            }
+            },
+            700: {
+            peek: {
+                before: -250,
+                after: -250
+            }
+            },
+            550: {
+            peek: {
+                before: -300,
+                after: -350
+            }
+            },
+            450: {
+            peek: {
+                before: -300,
+                after: -400
+            }
+            }
+        }
+        });
+
+        glide1.mount();
+        glide2.mount();
+    </script>
+{% endblock %}

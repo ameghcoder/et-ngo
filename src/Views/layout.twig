@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="robots" content="index, follow">
+    <meta name="csrf-token" content="{{ csrfToken }}" />
+
+    {% include './components/styles.twig' %}
+
+  <title>
+    {% block title %}
+        {# title goes here | not add here | it add by another file #}
+    {% endblock %} | Empowering Tomorrow
+  </title>
+</head>
+
+<body>
+    {% include './components/header.twig' %}
+    
+    {% block content %}
+        {# Main content goes #}
+    {% endblock %}
+
+    {% include './components/footer.twig' %}
+
+    {% block extra_scripts %}
+      
+    {% endblock %}
+</body>
+
+</html>
