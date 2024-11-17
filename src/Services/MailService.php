@@ -76,7 +76,7 @@ class MailService {
             $getTemplateDetail = file_get_contents(__DIR__ . "/../Template/email/$templateName");
             foreach($templateData as $key => $value) { 
                 // Replace placeholders in the template with actual data
-                $getTemplateDetail = str_replace("{{" . $key . "}}", $value, $getTemplateDetail);
+                $getTemplateDetail = str_replace("{" . $key . "}", $value, $getTemplateDetail);
             }
 
 
@@ -151,6 +151,8 @@ class MailService {
             if ($this->socket) {
                 fclose($this->socket);
             }
+
+            return false;
         }
     }
 }
