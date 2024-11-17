@@ -16,7 +16,7 @@ class Contact{
 
         $EmailResponse = $EmailService->sendEmail(
             $_ENV['MAIL_CONTACT'], 
-            $email, 
+            $_ENV['MAIL_TO'], 
             "Account Verification Email", 
             $templateName,
             $data
@@ -36,7 +36,7 @@ class Contact{
 
         $response = $stmt->execute();
 
-        // self::sendEmail($data["email"], "contact_us", $data);
+        self::sendEmail($data["email"], "contact_us", $data);
 
         return $response;
     }
