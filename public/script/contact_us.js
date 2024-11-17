@@ -43,7 +43,7 @@ const contact = () => {
         })
     })
 
-    $id("contact_us").addEventListener("click", () => {
+    $id("contact_us").addEventListener("click", (e) => {
         if(
             validatedValues.fname[1] &&
             validatedValues.lname[1] &&
@@ -59,9 +59,14 @@ const contact = () => {
             form.append("message", message.value);
             form.append("country_code", "+91");
 
+            e.target.innerHTML = "Wait ...";
+            e.target.setAttribute("disabled", "true");
+
             fetchDataVersion2(`/api/contactform`, "POST", form)
             .then(response => {
                 if(isValidJsonData(response)){
+                    e.target.innerHTML = "Submit";
+                    e.target.removeAttribute("disabled");
                     if(response["type"] == "error"){
                         Toast.Error(response["message"]);
                     } else if(response["type"] == "success"){

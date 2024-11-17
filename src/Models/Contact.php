@@ -17,7 +17,7 @@ class Contact{
         $EmailResponse = $EmailService->sendEmail(
             $_ENV['MAIL_CONTACT'], 
             $_ENV['MAIL_TO'], 
-            "Account Verification Email", 
+            "User Information form Empowering Tommorrow Website", 
             $templateName,
             $data
         );
