@@ -33,9 +33,9 @@ class ContactController{
         $data = [
             "fname" => Sanitizer::sanitizeFullName($_POST["fname"]),
             "lname" => Sanitizer::sanitizeFullName($_POST["lname"]),
-            "email" => Sanitizer::sanitizeFullName($_POST["email"]),
-            "number" => Sanitizer::sanitizeFullName($_POST["number"]),
-            "message" => Sanitizer::sanitizeFullName($_POST["message"]),
+            "email" => Sanitizer::sanitizeEmail($_POST["email"]),
+            "number" => Sanitizer::sanitizeMobile($_POST["number"]),
+            "message" => Sanitizer::sanitizeString($_POST["message"]),
             "country" => $_POST["country_code"]
         ];
 
@@ -95,8 +95,8 @@ class ContactController{
         // sanitize data 
         $data = [
             "fullName" => Sanitizer::sanitizeFullName($_POST["name"]),
-            "email" => Sanitizer::sanitizeString($_POST["email"]),
-            "number" => Sanitizer::sanitizeString($_POST["mobile_number"]),
+            "email" => Sanitizer::sanitizeEmail($_POST["email"]),
+            "number" => Sanitizer::sanitizeNumber($_POST["mobile_number"]),
             "education" => Sanitizer::sanitizeString($_POST["education"]),
             "occupation" => Sanitizer::sanitizeString($_POST["occupation"]),
             "designation" => Sanitizer::sanitizeString($_POST["designation"]),

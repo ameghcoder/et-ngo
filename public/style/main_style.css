@@ -671,12 +671,20 @@ input, select, textarea {
   position: static;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
 
 .relative {
   position: relative;
+}
+
+.sticky {
+  position: sticky;
 }
 
 .-bottom-14 {
@@ -735,6 +743,10 @@ input, select, textarea {
   left: 50%;
 }
 
+.left-4 {
+  left: 1rem;
+}
+
 .right-0 {
   right: 0px;
 }
@@ -745,6 +757,10 @@ input, select, textarea {
 
 .right-10 {
   right: 2.5rem;
+}
+
+.right-4 {
+  right: 1rem;
 }
 
 .top-0 {
@@ -759,8 +775,72 @@ input, select, textarea {
   top: 5rem;
 }
 
+.top-4 {
+  top: 1rem;
+}
+
 .top-\[20\%\] {
   top: 20%;
+}
+
+.left-full {
+  left: 100%;
+}
+
+.left-\[60vw\] {
+  left: 60vw;
+}
+
+.-top-1\/2 {
+  top: -50%;
+}
+
+.-top-4 {
+  top: -1rem;
+}
+
+.-top-8 {
+  top: -2rem;
+}
+
+.-top-2 {
+  top: -0.5rem;
+}
+
+.-top-10 {
+  top: -2.5rem;
+}
+
+.-top-20 {
+  top: -5rem;
+}
+
+.-top-40 {
+  top: -10rem;
+}
+
+.-bottom-4 {
+  bottom: -1rem;
+}
+
+.-bottom-8 {
+  bottom: -2rem;
+}
+
+.-left-4 {
+  left: -1rem;
+}
+
+.-bottom-12 {
+  bottom: -3rem;
+}
+
+.-left-12 {
+  left: -3rem;
+}
+
+.bottom-2 {
+  bottom: 0.5rem;
 }
 
 .z-0 {
@@ -902,6 +982,10 @@ input, select, textarea {
   height: 50vh;
 }
 
+.h-\[calc\(100\%-25vh\)\] {
+  height: calc(100% - 25vh);
+}
+
 .h-\[calc\(100vh-80px\)\] {
   height: calc(100vh - 80px);
 }
@@ -912,14 +996,6 @@ input, select, textarea {
 
 .h-full {
   height: 100%;
-}
-
-.h-\[calc\(100\%-100px\)\] {
-  height: calc(100% - 100px);
-}
-
-.h-\[calc\(100\%-25vh\)\] {
-  height: calc(100% - 25vh);
 }
 
 .min-h-screen {
@@ -1013,6 +1089,10 @@ input, select, textarea {
 
 .max-w-xl {
   max-width: 36rem;
+}
+
+.max-w-24 {
+  max-width: 6rem;
 }
 
 .-translate-x-1\/2 {
@@ -1599,6 +1679,18 @@ input, select, textarea {
     top: 0px;
   }
 
+  .md\:-top-2 {
+    top: -0.5rem;
+  }
+
+  .md\:bottom-4 {
+    bottom: 1rem;
+  }
+
+  .md\:bottom-10 {
+    bottom: 2.5rem;
+  }
+
   .md\:mb-4 {
     margin-bottom: 1rem;
   }
@@ -1734,6 +1826,10 @@ input, select, textarea {
   .md\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .md\:font-medium {
+    font-weight: 500;
   }
 }
 

@@ -5,17 +5,17 @@
 {% endblock %}
 
 {% block content %}
-    <div class="w-full h-[calc(100vh-80px)] glide background-gradient bg-[url('/public/assets/Gradient.webp')] bg-cover bg-bottom relative">
+    <div class="w-full min-h-screen h-auto glide background-gradient bg-[url('/public/assets/Gradient.webp')] bg-cover bg-bottom relative">
         <div class="flex absolute top-0 left-0 h-6 bg-slate-200 w-full z-50">
             <div class="w-[20%] h-full bg-green-600 transition-all text-center font-mono text-sm inline-flex items-center justify-center text-white tracking-wider" id="progress-bar">
                 20%
             </div>
         </div>
-        <div class="overflow-x-hidden h-full" data-glide-el="track">
+        <div class="overflow-x-hidden h-full min-h-screen" data-glide-el="track">
             <div data-current-slide="0" class="w-full flex h-full relative scroll-smooth transition-all" id="volunteer-form-container">
                 <div class="volunteerFormChildContainer flex w-full h-full" data-slide-id="01">
                     <div class="inline-flex flex-col gap-8 items-center justify-center w-full h-full">
-                        <p class="w-full max-w-lg text-center font-medium text-xl">
+                        <p class="w-full max-w-lg text-center font-normal md:font-medium text-base md:text-lg lg:text-xl p-4">
                             We are delighted you reached this page of our website!
                             You are just a tiny step away from volunteering with us.
                         </p>
@@ -23,26 +23,26 @@
                 </div>
                 <div class="volunteerFormChildContainer flex w-full h-full" data-slide-id="02">
                     <div class="inline-flex flex-col gap-8 items-center justify-center w-full h-full">
-                        <p class="w-full max-w-lg text-center font-medium text-2xl">
+                        <p class="w-full max-w-lg text-center font-normal md:font-medium text-base md:text-lg lg:text-2xl">
                             As a volunteer, you would require to:
                         </p>
                         <ul class="w-full max-w-2xl list-inside p-8">
-                            <li class="list-disc text-xl">Be a part of conducting engaging workshops in schools on climate change and hands-on science activities, scheduled on weekdays during school hours.</li>
-                            <li class="list-disc text-xl">Inspire curiosity and instill environmental consciousness among young minds.</li>
-                            <li class="list-disc text-xl">Contribute to both student-facing and behind-the-scenes activities to ensure the smooth execution of workshops.</li>
+                            <li class="list-disc text-base md:text-lg lg:text-xl">Be a part of conducting engaging workshops in schools on climate change and hands-on science activities, scheduled on weekdays during school hours.</li>
+                            <li class="list-disc text-base md:text-lg lg:text-xl">Inspire curiosity and instill environmental consciousness among young minds.</li>
+                            <li class="list-disc text-base md:text-lg lg:text-xl">Contribute to both student-facing and behind-the-scenes activities to ensure the smooth execution of workshops.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="volunteerFormChildContainer flex w-full h-full" data-slide-id="03">
                     <div class="inline-flex flex-col gap-8 items-center justify-center w-full h-full">
-                        <p class="w-full max-w-lg text-center font-medium text-2xl">
+                        <p class="w-full max-w-lg text-center font-normal md:font-medium text-base md:text-lg lg:text-2xl">
                             Volunteering with ET is for you if you have:
                         </p>
                         <ul class="w-full max-w-2xl list-inside p-8">
-                            <li class="list-disc text-xl">Passion for environmental education and a genuine commitment to Empowering Tomorrow's mission.</li>
-                            <li class="list-disc text-xl">Science-related academic background (Bachelors) with a basic understanding of school-level science.</li>
-                            <li class="list-disc text-xl">Excellent communication skills and the ability to work collaboratively in a team.</li>
-                            <li class="list-disc text-xl">Previous experience in education, outreach, or related fields is a plus, but not required.</li>
+                            <li class="list-disc text-base md:text-lg lg:text-xl">Passion for environmental education and a genuine commitment to Empowering Tomorrow's mission.</li>
+                            <li class="list-disc text-base md:text-lg lg:text-xl">Science-related academic background (Bachelors) with a basic understanding of school-level science.</li>
+                            <li class="list-disc text-base md:text-lg lg:text-xl">Excellent communication skills and the ability to work collaboratively in a team.</li>
+                            <li class="list-disc text-base md:text-lg lg:text-xl">Previous experience in education, outreach, or related fields is a plus, but not required.</li>
                         </ul>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                             <div class="inline-grid gap-4 grid-cols-1 md:grid-cols-2">
                                 <input type="text" name="volunteerName" id="volunteerName" placeholder="Full Name">
                                 <input type="text" name="volunteerEducation" id="volunteerEducation" placeholder="Education">
-                                <input type="tel" name="volunteerEmail" id="volunteerEmail" placeholder="Your Email">
+                                <input type="email" name="volunteerEmail" id="volunteerEmail" placeholder="Your Email">
                                 <input type="tel" name="volunteerNumber" id="volunteerNumber" placeholder="Your Mobile Number">
                             </div>
                             <div class="inline-flex gap-4 flex-col md:flex-row">
@@ -60,9 +60,9 @@
                                 <input type="text" name="volunteerDesignation" id="volunteerDesignation" placeholder="Designation">
                             </div>
                             <div class="inline-grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <input type="text" name="volunteerPinCode" id="volunteerPinCode" placeholder="pincode">
-                                <input type="text" name="volunteerCity" id="volunteerCity" placeholder="city">
-                                <input type="text" name="volunteerState" id="volunteerState" placeholder="state">
+                                <input type="text" name="volunteerPinCode" id="volunteerPinCode" placeholder="Pin Code">
+                                <input type="text" name="volunteerCity" id="volunteerCity" placeholder="City">
+                                <input type="text" name="volunteerState" id="volunteerState" placeholder="State">
                                 <select name="volunteerCountry" id="volunteerCountry" >
                                     <option value="Afghanistan">Afghanistan</option>
                                     <option value="Åland Islands">Åland Islands</option>
@@ -334,8 +334,10 @@
                     </div>
                 </div>
             </div>
+            <img class="artwork-01 fixed -left-12 -bottom-12 md:bottom-4 w-full max-w-40" src="/public/assets/atoms.png" alt="atom image">
+            <img class="artwork-02 fixed right-4 -top-40 md:-top-2 w-full max-w-24" src="/public/assets/double-helix.png" alt="double helix">
         </div>
-        <div class="volunteer-form-btns absolute bottom-10 right-10 h-20" data-glide-el="controls" >
+        <div class="volunteer-form-btns sticky bottom-2 md:bottom-10 right-10 h-20" data-glide-el="controls" >
             <button type="button" class="volunteer-form-btn volunteer-form-btn--left transition-all inline-flex bg-white border-2 border-green-600 text-green-600 text-lg px-8 py-2 focus:outline-none hover:text-white hover:bg-green-700 rounded-md hover:-translate-y-1 justify-center" >Back</button>
             <button type="button" class="volunteer-form-btn volunteer-form-btn--right transition-all inline-flex text-white bg-green-600 text-lg border-0 px-8 py-2 focus:outline-none hover:bg-green-700 rounded-md hover:-translate-y-1 justify-center">Start</button>
         </div>
