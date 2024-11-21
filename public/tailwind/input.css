@@ -89,4 +89,8 @@
     input, select, textarea{
         @apply px-4 py-2 rounded-md bg-transparent border border-green-600;
     }
+
+    .volunteerFormChildContainer{
+        width: 100%;
+    }
 }

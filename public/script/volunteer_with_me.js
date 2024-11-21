@@ -8,34 +8,34 @@ const afterRunSlide = (slideNumber = 1) => {
     glideRightArrow.style.transition = "opacity 0.3s ease, transform 0.3s ease";
 
     switch (slideNumber) {
-        case 1:
+        case 0:
             glideLeftArrow.style.opacity = "0"; // Hide smoothly
             glideLeftArrow.style.transform = "translateX(-10px)"; // Slide out
             glideRightArrow.innerHTML = "Start";
             glideRightArrow.setAttribute("data-glide-dir", ">");
             break;
 
-        case 2:
+        case 1:
             glideLeftArrow.style.opacity = "1"; // Show smoothly
             glideLeftArrow.style.transform = "translateX(0px)"; // Slide back
             glideRightArrow.innerHTML = "Next";
             glideRightArrow.setAttribute("data-glide-dir", ">");
             break;
 
-        case 3:
+        case 2:
             glideLeftArrow.style.opacity = "1";
             glideRightArrow.innerHTML = "Next";
             glideRightArrow.setAttribute("data-glide-dir", ">");
             break;
 
-        case 4:
+        case 3:
             glideLeftArrow.style.opacity = "1";
             glideRightArrow.innerHTML = "Submit";
             glideRightArrow.removeAttribute("data-glide-dir");
 
             break;
 
-        case 5:
+        case 4:
             glideLeftArrow.style.opacity = "0"; // Hide smoothly
             glideLeftArrow.style.transform = "translateX(-10px)";
             glideRightArrow.innerHTML = "Go To Homepage";
@@ -47,12 +47,31 @@ const afterRunSlide = (slideNumber = 1) => {
     }
 }
 
+const setChildWidth = (val) => {
+    const glideSlideChild = $all(".volunteerFormChildContainer");
+    glideSlideChild.forEach(child => {
+        child.style.width = `${val}px`;
+    })
 
+    let currentSlide = $id("volunteer-form-container").getAttribute("data-current-slide");
+    $id("volunteer-form-container").style.transform = `translateX(-${parseInt(currentSlide) * val})`;
+}
+const updateProgressBar = (slide) => {
+    console.log(slide);
+    $id("progress-bar").style.width = (20 * (slide + 1))  + "%" ;
+    $id("progress-bar").innerHTML = (20* (slide + 1))  + "%" ;
+}
 
 const volunteerWithUs = () => {
     // Variables 
     const glideSlide = $id("volunteer-form-container");
-    glideSlide.style.width = `${parseInt(glideSlide.children.length) * glideSlide.clientWidth}px`;
+    glideSlide.style.width = `${parseInt(glideSlide.children.length) * $("body").clientWidth}px`;
+    setChildWidth( $("body").clientWidth);    
+    
+    window.onresize = () => {
+        glideSlide.style.width = `${parseInt(glideSlide.children.length) * $("body").clientWidth}px`;
+        setChildWidth( $("body").clientWidth);    
+    }
 
     const preSlideBtn = $(".volunteer-form-btn--left");
     const nextSlideBtn = $(".volunteer-form-btn--right");
@@ -179,25 +198,20 @@ const volunteerWithUs = () => {
                     btn.removeAttribute("disabled");
 
                     if(response["type"] == "error"){
-                        Toast.Error(response("message"));
-
-                        return false;
+                        Toast.Error(response["message"]);
                     } else if(response["type"] == "success"){
                         Toast.ToastPop("success", response["message"]);
                         Object.keys(validatedValues).forEach(key => {
                             elements[key].innerHTML = "";
                         })
-
-                        return true;
+                        slide(1, false);
                     } 
-                    return false;
                 } else{
                     throw new Error("Reload page or Try again later");
                 }
             })
         } else{
             Toast.Error(`Some of the field is Empty or Invalid (check the red border)`);
-            return false;
         }
     }
 
@@ -206,25 +220,19 @@ const volunteerWithUs = () => {
     // Moving slide function
     const slide = (turn, specialCondition = true) => {
         let glideSlide = $id('volunteer-form-container');
-        let windowWidth = $("#volunteer-form-container > div").clientWidth;
+        let windowWidth = $("body").clientWidth;
 
         // -1 means previous and 1 or +1 means next turn
         let currentSlide = glideSlide.getAttribute("data-current-slide");
         let transformLeftValue = 0;
         
         if(turn > 0 && specialCondition && currentSlide == 3){
-            let response = submitForm(nextSlideBtn);
-
-            if(response){
-                slide(1, false);
-            }
-            
+            submitForm(nextSlideBtn);
             return 0;
         }
 
-
         let slideNumber = 1;
-        if(currentSlide > 0 || currentSlide < 5){
+        if(currentSlide > -1 || currentSlide < 5){
             slideNumber = parseInt(currentSlide) + turn;
             transformLeftValue = `${parseInt(slideNumber) * windowWidth}px`;
         } 
@@ -236,6 +244,7 @@ const volunteerWithUs = () => {
 
         // after run slide change the appearence of the back and forth button
         afterRunSlide(slideNumber);
+        updateProgressBar(slideNumber);
     }
 
     preSlideBtn.addEventListener("click", () => {
@@ -246,8 +255,6 @@ const volunteerWithUs = () => {
     });
     
     afterRunSlide();
-
-    
 
 }
 

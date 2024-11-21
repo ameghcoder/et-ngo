@@ -31,5 +31,14 @@ return [
             'port' => 80,
             'charset' => 'utf8',
         ],
+        'production' => [
+            'adapter' => 'mysql',
+            'host' => $dbHost,
+            'name' => $dbName,
+            'user' => $dbUser,
+            'pass' => $dbPass,
+            'port' => 80,
+            'charset' => 'utf8',
+        ],
     ],
 ];

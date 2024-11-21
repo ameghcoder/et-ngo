@@ -651,8 +651,7 @@ p {
   }
 }
 
-input, select, textarea{
-  pointer-events: visible;
+input, select, textarea {
   border-radius: 0.375rem;
   border-width: 1px;
   --tw-border-opacity: 1;
@@ -662,6 +661,10 @@ input, select, textarea{
   padding-right: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.volunteerFormChildContainer{
+  width: 100%;
 }
 
 .static {
@@ -911,6 +914,14 @@ input, select, textarea{
   height: 100%;
 }
 
+.h-\[calc\(100\%-100px\)\] {
+  height: calc(100% - 100px);
+}
+
+.h-\[calc\(100\%-25vh\)\] {
+  height: calc(100% - 25vh);
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1028,16 +1039,16 @@ input, select, textarea{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.list-inside {
+  list-style-position: inside;
+}
+
 .list-disc {
   list-style-type: disc;
 }
 
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -1102,6 +1113,10 @@ input, select, textarea{
 
 .overflow-x-hidden {
   overflow-x: hidden;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
 }
 
 .scroll-smooth {
@@ -1255,6 +1270,10 @@ input, select, textarea{
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-8 {
+  padding: 2rem;
 }
 
 .px-4 {
@@ -1632,6 +1651,10 @@ input, select, textarea{
   .md\:rotate-0 {
     --tw-rotate: 0deg;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:flex-row {

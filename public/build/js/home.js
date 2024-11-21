@@ -1,0 +1,1 @@
+const init=()=>{$id("hamburger-btn").addEventListener("click",()=>{$id("menubar").classList.toggle("-left-full"),$id("menubar").classList.toggle("left-0")})};"interactive"==document.readyState?init():document.addEventListener("DOMContentLoaded",init);
