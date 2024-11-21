@@ -9,10 +9,7 @@
         <section class="flex items-center justify-between p-4 w-full max-w-[1700px] mx-auto flex-col md:flex-row">
       <div class="flex gap-4 flex-col sm:flex-row">
         {% include './components/donate_btn.twig' %}
-        <a href="#" id="volunteer-form-btn"
-          class="inline-flex justify-center text-white bg-green-600 text-xl border-0 px-8 py-2 focus:outline-none hover:bg-green-700 rounded-md hover:-translate-y-1 transition">
-          Volunteer Now
-        </a>
+        {% include './components/volunteer_now_btn.twig' %}
       </div>
       <div class="mt-4 md:mt-0 text-right flex gap-2">
         <a href="https://www.facebook.com/people/Empowering-Tomorrow/100083182405937/">
@@ -202,10 +199,7 @@
       </div>
       <div class="flex gap-4 flex-col md:flex-row">
       {% include './components/donate_btn.twig' %}
-        <a href="#" id="volunteer-form-btn"
-          class="inline-flex text-white bg-green-600 text-xl border-0 px-8 py-2 focus:outline-none hover:bg-green-700 rounded-md hover:-translate-y-1 transition">
-          Volunteer Now
-        </a>
+       {% include './components/volunteer_now_btn.twig' %}
       </div>
       <div>
         <p class="text-2xl text-center opacity-75">

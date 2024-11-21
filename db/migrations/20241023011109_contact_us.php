@@ -17,7 +17,7 @@ final class ContactUs extends AbstractMigration
      * Remember to call "create()" or "update()" and NOT "save()" when working
      * with the Table class.
      */
-    public function change(): void
+    public function up(): void
     {
         if(!$this->hasTable('contactus')){
             // create table
@@ -32,5 +32,8 @@ final class ContactUs extends AbstractMigration
                 ->addColumn('date', 'timestamp', ['default' => 'CURRENT_TIMESTAMP'])
                 ->create();
         }
+    }
+    public function down(){
+        $this->table('contactus')->drop()->save();
     }
 }

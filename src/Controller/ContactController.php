@@ -74,7 +74,8 @@ class ContactController{
 
         if(
             !$_POST["name"] && 
-            !$_POST["contact"] &&
+            !$_POST["email"] &&
+            !$_POST["mobile_number"] &&
             !$_POST["education"] &&
             !$_POST["occupation"] &&
             !$_POST["designation"] &&
@@ -93,12 +94,13 @@ class ContactController{
 
         // sanitize data 
         $data = [
-            "fname" => Sanitizer::sanitizeFullName($_POST["name"]),
-            "contact" => Sanitizer::sanitizeString($_POST["contact"]),
+            "fullName" => Sanitizer::sanitizeFullName($_POST["name"]),
+            "email" => Sanitizer::sanitizeString($_POST["email"]),
+            "number" => Sanitizer::sanitizeString($_POST["mobile_number"]),
             "education" => Sanitizer::sanitizeString($_POST["education"]),
             "occupation" => Sanitizer::sanitizeString($_POST["occupation"]),
             "designation" => Sanitizer::sanitizeString($_POST["designation"]),
-            "pincode" => Sanitizer::sanitizeNumber($_POST["pincode"]),
+            "pincode" => $_POST["pincode"],
             "city" => Sanitizer::sanitizeString($_POST["city"]),
             "state" => Sanitizer::sanitizeString($_POST["state"]),
             "country" => Sanitizer::sanitizeString($_POST["country"]),
@@ -108,8 +110,9 @@ class ContactController{
 
         // now validate data
         if(
-            Validate::validateFullName($data["name"]) &&
-            Validate::validateString($data["contact"]) &&
+            Validate::validateFullName($data["fullName"]) &&
+            Validate::validateEmail($data["email"]) &&
+            Validate::validateMobile($data["number"]) &&
             Validate::validateString($data["education"]) &&
             Validate::validateString($data["occupation"]) &&
             Validate::validateString($data["designation"]) &&
@@ -133,8 +136,53 @@ class ContactController{
                 );
             }
         } else{
+            $msg = "";
+            switch (false) {
+                case Validate::validateFullName($data["fullName"]):
+                    $msg = "Full Name have";
+                    break;
+                    
+                case Validate::validateEmail($data["email"]):
+                    $msg = "Email have";
+                    break;
+
+                case Validate::validateMobile($data["number"]):
+                    $msg = "Number have";
+                    break;
+
+                case Validate::validateString($data["education"]):
+                    $msg = "Education have";
+                    break;
+
+                case Validate::validateString($data["occupation"]):
+                    $msg = "Occupation have";
+                    break;
+
+                case Validate::validateString($data["designation"]):
+                    $msg = "Designation have";
+                    break;
+                case Validate::validatePinCode($data["pincode"]) :
+                    $msg = "Pincode have";
+                    break;
+                case Validate::validateString($data["city"]) :
+                    $msg = "City have";
+                    break;
+                case Validate::validateString($data["state"]) :
+                    $msg = "State have";
+                    break;
+                case Validate::validateString($data["country"]) :
+                    $msg = "Country have";
+                    break;
+                case Validate::validateString($data["atp"]) :
+                    $msg = "ATP have";
+                    break;
+                case Validate::validateString($data["message"]):
+                    $msg = "Message have";
+                    break;
+            }
+
             JsonResponse::send(
-                "Invalid Data, Try again",
+                "$msg invalid data and value is " . $data['pincode'] . ", Try again",
                 "error"
             );
         }

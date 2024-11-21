@@ -38,5 +38,6 @@ $router->map('GET', '/what-we-do', function() use ($twig){
 
 // Volunteer with ET
 $router->map('GET', '/volunteer-with-us', function() use ($twig){
+    addCSRFToken($twig);
     echo $twig->render('volunteerform.twig');
 });

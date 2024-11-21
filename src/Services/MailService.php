@@ -4,6 +4,7 @@ namespace App\Services;
 
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
+use Psr\Log\LogLevel;
 
 class MailService {
     private $host;       // SMTP host address (e.g., smtp.gmail.com)
@@ -35,6 +36,11 @@ class MailService {
                 break;
             }
         }
+
+        if (feof($this->socket)) {
+            throw new \Exception("Connection closed by server unexpectedly.");
+        }
+
         return $response;
     }
 
@@ -89,6 +95,8 @@ class MailService {
                 throw new \Exception("Connection failed: $errstr ($errno)");
             }
 
+            stream_set_timeout($this->socket, 30); // Set timeout  for read/write operations
+
             // Log the initial server response (220 code expected)
             $this->getResponse();
 
@@ -98,7 +106,11 @@ class MailService {
             // If using TLS (port 587), start encryption
             if ($this->port == 587) {
                 $this->sendCommand("STARTTLS", 220); // Initiate TLS handshake
-                stream_socket_enable_crypto($this->socket, true, STREAM_CRYPTO_METHOD_TLS_CLIENT);
+                stream_socket_enable_crypto(
+                    $this->socket, 
+                    true, 
+                    STREAM_CRYPTO_METHOD_TLSv1_2_CLIENT | STREAM_CRYPTO_METHOD_TLSv1_3_CLIENT 
+                );
                 $this->sendCommand("EHLO " . gethostname()); // Reintroduce after TLS starts
             }
 
@@ -137,22 +149,21 @@ class MailService {
         } catch (\Exception $e) {
             // Log errors using Monolog
             $log = new Logger('Mail');
-            $log->pushHandler(new StreamHandler(__DIR__ . '/../../logs/app.log', Logger::DEBUG));
+            $log->pushHandler(new StreamHandler(__DIR__ . '/../../logs/app.log', LogLevel::DEBUG, true));
             $log->error("Email sending failed", [
                 'to' => $to,
                 'from' => $from,
                 'subject' => $subject,
-                'error' => $e->getMessage()
+                'error' => $e->getMessage(),
+                'stacktrace' => $e->getTraceAsString()
             ]);
 
             return false; // Email failed to send
         } finally {
             // Ensure the socket is closed in case of an error
-            if ($this->socket) {
+            if (is_resource($this->socket)) {
                 fclose($this->socket);
             }
-
-            return false;
         }
     }
 }

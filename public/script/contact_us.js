@@ -22,7 +22,7 @@ const contact = () => {
             false
         ],
         message: [
-            "string",
+            "msg",
             false
         ]
     }

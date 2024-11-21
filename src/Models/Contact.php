@@ -44,10 +44,11 @@ class Contact{
     public static function saveVolunteerForm($data){
         $conn = Database::connect();
 
-        $query = "INSERT INTO volunteer(fullName, contact, education, occupation, designation, pinCode, city, state, country, availableToParticipate, message) VALUES (:name, :contact, :education, :occupation, :designation, :pincode, :city, :state, :country, :atp, :message)";
+        $query = "INSERT INTO volunteerform(fullName, email, mobile, education, occupation, designation, pinCode, city, state, country, availableToParticipate, message) VALUES (:name, :email, :mobile, :education, :occupation, :designation, :pincode, :city, :state, :country, :atp, :message)";
         $stmt = $conn->prepare($query);
-        $stmt->bindParam(":name", $data["name"], PDO::PARAM_STR);
-        $stmt->bindParam(":contact", $data["contact"], PDO::PARAM_STR);
+        $stmt->bindParam(":name", $data["fullName"], PDO::PARAM_STR);
+        $stmt->bindParam(":email", $data["email"], PDO::PARAM_STR);
+        $stmt->bindParam(":mobile", $data["number"], PDO::PARAM_STR);
         $stmt->bindParam(":education", $data["education"], PDO::PARAM_STR);
         $stmt->bindParam(":occupation", $data["occupation"], PDO::PARAM_STR);
         $stmt->bindParam(":designation", $data["designation"], PDO::PARAM_STR);

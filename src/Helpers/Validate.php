@@ -31,8 +31,8 @@ class Validate {
         return v::numericVal()->length(6, 6)->validate($otp);
     }    
     // Validate OTP (Numeric, 6 digits)
-    public static function validatePinCode($otp) {
-        return v::numericVal()->length(5, 10)->validate($otp);
+    public static function validatePinCode($pincode) {
+        return v::regex('/^[A-Za-z0-9][A-Za-z0-9\-\s]{2,9}[A-Za-z0-9]$/')->validate($pincode);
     }
 
     // Validate mobile number (10 digits, starts with 7, 8, or 9)

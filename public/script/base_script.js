@@ -289,11 +289,17 @@ class Validator {
             case "string":
                 pattern = /^[a-zA-Z\s]+$/;
                 break;
+            case "msg": 
+                pattern = /^[a-zA-Z0-9 .,?!:;+\-*/=@#&_(){}\[\]'""]+$/;
+                break;
             case "mobile":
                 pattern = /^[789]\d{9}$/;
                 break;
             case "password":
                 pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$/;
+                break;
+            case "number":
+                pattern = /^\d+$/;
                 break;
           
             default:
