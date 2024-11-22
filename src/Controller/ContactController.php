@@ -98,7 +98,7 @@ class ContactController{
         $data = [
             "fullName" => Sanitizer::sanitizeFullName($_POST["name"]),
             "email" => Sanitizer::sanitizeEmail($_POST["email"]),
-            "number" => Sanitizer::sanitizeNumber($_POST["mobile_number"]),
+            "number" => Sanitizer::sanitizeMobile($_POST["mobile_number"]),
             "education" => Sanitizer::sanitizeString($_POST["education"]),
             "occupation" => Sanitizer::sanitizeString($_POST["occupation"]),
             "designation" => Sanitizer::sanitizeString($_POST["designation"]),
@@ -184,7 +184,7 @@ class ContactController{
             }
 
             JsonResponse::send(
-                "$msg invalid data and value is " . $data['pincode'] . ", Try again",
+                "$msg invalid data , Try again",
                 "error"
             );
         }
