@@ -1,5 +1,5 @@
 
-const afterRunSlide = (slideNumber = 1) => {
+const afterRunSlide = (slideNumber = 0) => {
     const glideLeftArrow = $(".volunteer-form-btn--left");
     const glideRightArrow = $(".volunteer-form-btn--right");
 
@@ -11,12 +11,14 @@ const afterRunSlide = (slideNumber = 1) => {
         case 0:
             glideLeftArrow.style.opacity = "0"; // Hide smoothly
             glideLeftArrow.style.transform = "translateX(-10px)"; // Slide out
+            glideLeftArrow.setAttribute("disabled", "true");
             glideRightArrow.innerHTML = "Start";
             glideRightArrow.setAttribute("data-glide-dir", ">");
             break;
 
         case 1:
             glideLeftArrow.style.opacity = "1"; // Show smoothly
+            glideLeftArrow.removeAttribute("disabled");
             glideLeftArrow.style.transform = "translateX(0px)"; // Slide back
             glideRightArrow.innerHTML = "Next";
             glideRightArrow.setAttribute("data-glide-dir", ">");
@@ -32,11 +34,13 @@ const afterRunSlide = (slideNumber = 1) => {
             glideLeftArrow.style.opacity = "1";
             glideRightArrow.innerHTML = "Submit";
             glideRightArrow.removeAttribute("data-glide-dir");
-
+            glideLeftArrow.removeAttribute("disabled");
+            
             break;
 
         case 4:
             glideLeftArrow.style.opacity = "0"; // Hide smoothly
+            glideLeftArrow.setAttribute("disabled", "true");
             glideLeftArrow.style.transform = "translateX(-10px)";
             glideRightArrow.innerHTML = "Go To Homepage";
             glideRightArrow.removeAttribute("data-glide-dir");
@@ -226,6 +230,10 @@ const volunteerWithUs = () => {
         let currentSlide = glideSlide.getAttribute("data-current-slide");
         let transformLeftValue = 0;
         
+        if(turn < 0 && currentSlide == 0){
+            return 0;
+        }
+
         if(turn > 0 && specialCondition && currentSlide == 3){
             submitForm(nextSlideBtn);
             return 0;
@@ -255,7 +263,6 @@ const volunteerWithUs = () => {
     });
     
     afterRunSlide();
-
 }
 
 document.readyState == "interactive" 

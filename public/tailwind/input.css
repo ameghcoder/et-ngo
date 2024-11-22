@@ -93,4 +93,7 @@
     .volunteerFormChildContainer{
         width: 100%;
     }
+    .animate-duration-20{
+        animation-duration: 20s !important;
+    }
 }

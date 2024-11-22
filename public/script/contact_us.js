@@ -57,7 +57,7 @@ const contact = () => {
             form.append("number", pnumber.value);
             form.append("email", email.value);
             form.append("message", message.value);
-            form.append("country_code", "+91");
+            form.append("country_code", $id("country_code").value);
 
             e.target.innerHTML = "Wait ...";
             e.target.setAttribute("disabled", "true");

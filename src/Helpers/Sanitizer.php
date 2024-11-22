@@ -56,7 +56,7 @@ class Sanitizer
      */
     public static function sanitizeMobile(string $mobile): string
     {
-        return preg_replace('/\D/', '', $mobile);
+        return preg_replace('/\D/', '', (string) $mobile);
     }
 
     /**

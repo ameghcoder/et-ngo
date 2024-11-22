@@ -47,8 +47,10 @@ class ContactController{
             Validate::validateMobile($data["number"]) &&
             Validate::validateString($data["message"])
         ){
-            $data["number"] = $data["country"] + $data["number"];
+            $data["number"] = $data["country"] . $data["number"];
+            
             $response = Contact::saveContactForm($data);
+
             if($response){
                 JsonResponse::send(
                     "Thank you for reaching out to us. We have received your message.",
