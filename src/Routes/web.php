@@ -2,6 +2,7 @@
 
 
 use App\Services\SessionManagement;
+use Respect\Validation\Validator as v;
 
 // Use of Global Variables from Init.php
 global $twig, $icons, $images;

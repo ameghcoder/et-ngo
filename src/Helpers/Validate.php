@@ -13,7 +13,8 @@ class Validate {
 
     // Validate full name (Only allows alphabets and spaces)
     public static function validateFullName($name) {
-        return v::alpha()->noWhitespace()->length(3, 100)->validate($name);
+        // return v::alpha()->noWhitespace()->length(3, 100)->validate($name);
+        return v::length(3, 100)->regex('/^[a-zA-Z\s]+$/')->validate($name);
     }
 
     // Validate password (At least 8 characters, at least 1 letter, and at least 1 number)
