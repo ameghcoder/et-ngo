@@ -152,7 +152,6 @@ const volunteerWithUs = () => {
         pincode,
         city,
         state,
-        country,
         message
     }
 
@@ -175,7 +174,6 @@ const volunteerWithUs = () => {
             validatedValues.pincode[1] &&
             validatedValues.city[1] &&
             validatedValues.state[1] &&
-            validatedValues.country[1] &&
             validatedValues.message[1]
         ){
             const form = new FormData();
