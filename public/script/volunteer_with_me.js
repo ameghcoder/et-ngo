@@ -61,7 +61,6 @@ const setChildWidth = (val) => {
     $id("volunteer-form-container").style.transform = `translateX(-${parseInt(currentSlide) * val})`;
 }
 const updateProgressBar = (slide) => {
-    console.log(slide);
     $id("progress-bar").style.width = (20 * (slide + 1))  + "%" ;
     $id("progress-bar").innerHTML = (20* (slide + 1))  + "%" ;
 }
@@ -129,10 +128,6 @@ const volunteerWithUs = () => {
             false,
         ],
         state: [
-            "string",
-            false
-        ],
-        country: [
             "string",
             false
         ],
