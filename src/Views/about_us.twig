@@ -5,9 +5,16 @@
 {% endblock %}
 
 {% block content %}
+    <style>
+        @media (max-width: 417px) {
+            .hero-section-bg-style{
+                background-position: center -30%;
+            }
+        }
+    </style>
     <main>
     <!-- hero section -->
-    <section class="w-full h-[calc(100vh-80px)] relative hero-section-bg bg-[#414141] md:bg-cover">
+    <section class="w-full h-[calc(100vh-80px)] relative hero-section-bg hero-section-bg-style bg-[#414141] md:bg-cover" >
         <div class="md:bg-gradient-to-bl from-transparent to-black/75 absolute top-0 left-0 w-full h-full z-10">
             <div class="w-full h-full flex items-end justify-start relative">
             <div
@@ -39,7 +46,7 @@
                 </div>
                 <div class="ml-4">
                     <div class="flex flex-col gap-4 text-white font-bold text-xl md:text-2xl lg:text-4xl">
-                    35+
+                    40+
                     </div>
                     <div class="flex flex-col gap-4 text-white font-bold text-xl md:text-2xl lg:text-4xl">
                     Workshops
@@ -177,9 +184,9 @@
     <section class="w-full h-auto relative overflow-hidden">
         <div class="py-4 md:py-8 flex items-center flex-col">
             <h2 class="text-4xl font-medium text-gray-500 text-center">
-            <em class="text-green-700 text-4xl">What</em>
-            we do
             <em class="text-green-700 text-4xl">Why</em>
+            we do
+            <em class="text-green-700 text-4xl">What</em>
             we do
             </h2>
         </div>

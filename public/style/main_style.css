@@ -1601,6 +1601,10 @@ input, select, textarea {
     flex-direction: row;
   }
 
+  .sm\:bg-center {
+    background-position: center;
+  }
+
   .sm\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
